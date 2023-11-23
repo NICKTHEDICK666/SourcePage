@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --yellow: #d2f65a;
+  --black: #333333;
+  --grey: #898989;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.invisible {
+  display: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--yellow);
+  border-radius: 24px;
+  max-width: 440px;
+  width: 100%;
+  padding: clamp(10px, 3vw, 33px) 10px clamp(10px, 3vw, 30px);
+
+  font-size: clamp(10px, 3vw, 18px);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  padding: 32px 9px 29px;
+  color: var(--yellow);
+  background-color: var(--black);
+  border: 1px solid var(--yellow);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: clamp(5px, 2.2vw, 15px);
+  margin: clamp(2px, 3vw, 97px);
+}
